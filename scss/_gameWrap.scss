@@ -1,44 +1,60 @@
 .gameWrap {
     padding-bottom: 30px;
 
+    &.slot {
+        background-position-y: 0;
+    }
+
     //跑馬燈
     .marqueeArea {
-        width: 100%;
-        height: auto;
+        width: 1400px;
+        height: 40px;
+        background: $marquee_BG;
+        border-radius: 25px;
+        margin: 0 auto;
+        border: solid 1px $marquee_Border;
 
         .center {
-            width: 1400px;
-            height: 50px;
-            margin: 0 auto;
+            width: 100%;
+            height: 100%;
 
             .marqueeWrap {
                 width: 100%;
                 height: 100%;
                 display: flex;
                 align-items: center;
-                background: $marquee_BG;
-                box-shadow: 0 0 13px 3px $marquee_Shadow;
-                border-radius: 25px;
+                justify-content: flex-end;
+                position: relative;
+
+                &::before,&::after {
+                    content: "";
+                    position: absolute;
+                    width: 49px;
+                    height: 71px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &::before {
+                    left: -20px;
+                    transform: scaleX(-1) translateY(-50%);
+                    z-index: 1;
+                }
+                &::after {
+                    right: -20px;
+                }
 
                 .marquee_ic {
-                    width: 160px;
-                    height: 88%;
-                    border-radius: 25px;
-                    background: $marquee_Linear;
-                    margin-left: 3px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    p {
-                        font-size: 16px;
-                        font-weight: bold;
-                        color: $marquee_LinearWord;
-                    }
+                    width: 65px;
+                    height: 65px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 6px;
+                    z-index: 1;
                 }
 
                 .marquee {
-                    width: 100%;
+                    width: 98%;
                     height: auto;
                     overflow: hidden;
 
@@ -121,7 +137,7 @@
                 line-height: 24px;
                 font-size: 14px;
                 font-weight: bold;
-                color: $title_2;
+                color: $remind;
             }
         }
 
@@ -171,8 +187,7 @@
 
         .slotBody {
             background: $mainBG_1;
-            border-radius: 5px;
-            box-shadow: 0 5px 10px $mainShadow_1;
+            border: solid 1px $mainBorder_2;
 
             .nav {
                 margin: 0 26px;
@@ -230,7 +245,7 @@
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
-                        left: 7px;
+                        left: 12px;
                         width: 20px;
                         height: 20px;
                     }
@@ -239,7 +254,7 @@
                         width: 330px;
                         height: 40px;
                         @include mainInput;
-                        padding-left: 30px;
+                        padding-left: 40px;
                     }
                 }
             }
@@ -284,12 +299,20 @@
                                 height: 40px;
                                 font-size: 18px;
 
+                                &:hover,&:active,&.active {
+                                    
+                                    i {
+                                        filter: brightness(1);
+                                    }
+                                }
+
                                 i {
                                     display: inline-block;
                                     width: 8px;
                                     height: 15px;
                                     transform: scaleX(-1);
                                     margin-left: 20px;
+                                    filter: brightness(0.1);
                                 }
                             }
                             .back {
@@ -317,7 +340,7 @@
                             li {
                                 width: 250px;
                                 height: 200px;
-                                border: solid 1px $mainBorder_1;
+                                border: solid 1px $mainBorder_2;
                                 border-radius: 5px;
                                 overflow: hidden;
                                 cursor: pointer;
@@ -347,6 +370,8 @@
                                     justify-content: space-between;
                                     position: relative;
                                     z-index: 1;
+                                    border-top: solid 1px $mainBorder_2;
+                                    background: $gameWrap_WordBG;
 
                                     p {
                                         font-size: 18px;

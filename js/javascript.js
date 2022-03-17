@@ -53,7 +53,7 @@ $(function() {
 //ad
 $(document).on('ready', function() {
 	$(".single-item").slick({
-		dots: false,
+		dots: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
@@ -76,7 +76,7 @@ $(function(){
         n ++;
         $(slwp).css("transform","translateX("+(-220 * n)+"px)");
 
-        if(n == 1){
+        if(n == 3){
             n --;
         }
     })
@@ -201,6 +201,15 @@ $(function(){
     $(".pointWrap .open").click(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.pointWindow').addClass('display');
+    })
+
+    $(".registerWrap .send").click(function(){
+        $('.jumpWindow').removeClass('display');
+        $('.filter,.plsGo').addClass('display');
+    })
+    $(".registerWrap .checkBox span").click(function(){
+        $('.jumpWindow').removeClass('display');
+        $('.filter,.ruleWindow').addClass('display');
     })
 })
 function unlogin(){
@@ -581,5 +590,18 @@ $(function(){
     $('.forUs_6').click(function(){
         $('.aboutUs_6').addClass('display');
         $('.aboutUs_6').siblings().removeClass('display');
+    })
+
+    $('.forApp_1').click(function(){
+        $('.download_1').addClass('display');
+        $('.download_1').siblings().removeClass('display');
+    })
+    $('.forApp_2').click(function(){
+        $('.download_2').addClass('display');
+        $('.download_2').siblings().removeClass('display');
+    })
+    $('.forApp_3').click(function(){
+        $('.download_3').addClass('display');
+        $('.download_3').siblings().removeClass('display');
     })
 })
