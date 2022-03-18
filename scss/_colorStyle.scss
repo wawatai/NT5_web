@@ -12,8 +12,7 @@ $mainFont_2: #ffffff;
 
 //提醒字色
 $remind: #35b751;
-$remind_sp: #4ec500;
-$remind_sp2: #2fd4b6;
+$remind_sp: #2fd4b6;
 
 //陰影色
 $mainShadow_1: #00000066;
@@ -542,16 +541,17 @@ $register_Icon: linear-gradient(-45deg,#fdefd9 0%,#c29054 50%,#fdefd9 100%);
 }
 //優惠申請按鈕
 @mixin eventApply {
-    background: linear-gradient(to bottom,#9ddbec 0%,#0282cc 50%,#82aeeb 100%);
-    border: solid 1px #0282cc;
-    border-radius: 3px;
+    background: linear-gradient(to top,#116840 0%,#40d879 100%);
+    border: solid 1px #289e54;
     color: #ffffff;
+    border-radius: 3px;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
-
+    
     &:hover,&:active,&.active {
-        background: linear-gradient(to top,#9ddbec 0%,#0282cc 50%,#82aeeb 100%);
+        background: linear-gradient(to top,#d8a363 0%,#a27034 100%);
+        border-color: #eec58b;
     }
 }
 //灰漸層按鈕

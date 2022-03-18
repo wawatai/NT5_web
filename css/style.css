@@ -2623,16 +2623,17 @@ html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:hover, ht
 }
 html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child {
   display: none;
-  background: linear-gradient(to bottom, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
-  border: solid 1px #0282cc;
-  border-radius: 3px;
+  background: linear-gradient(to top, #116840 0%, #40d879 100%);
+  border: solid 1px #289e54;
   color: #ffffff;
+  border-radius: 3px;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child:hover, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child:active, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child.active {
-  background: linear-gradient(to top, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
+  background: linear-gradient(to top, #d8a363 0%, #a27034 100%);
+  border-color: #eec58b;
 }
 html body .eventWrap .eventBody .eventDetail {
   display: none;
@@ -4757,7 +4758,7 @@ html body .innerPage .center .mailWrap .bottom .list ul li .msg::before {
 html body .innerPage .center .mailWrap .bottom .list ul li .date {
   width: 14%;
   text-align: center;
-  color: #999999;
+  color: #dcab70;
 }
 html body .innerPage .center .eventWrap {
   width: 1140px;
@@ -5102,6 +5103,20 @@ html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .t
   border-bottom: solid 2px #289952;
   font-size: 13px;
   font-weight: bold;
+  position: relative;
+}
+html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap table tr th:last-child::before {
+  display: none;
+}
+html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap table tr th::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background: #8e7c5a;
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap table tr td {
   height: 50px;
@@ -5111,6 +5126,20 @@ html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .t
   font-weight: bold;
   text-align: center;
   border-bottom: solid 1px #8e7c5a;
+  position: relative;
+}
+html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap table tr td:last-child::before {
+  display: none;
+}
+html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap table tr td::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background: #8e7c5a;
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap .noData {
   display: none;
@@ -6540,7 +6569,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li {
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .name {
   font-size: 17px;
-  color: #ffffff;
+  color: #f3d3a4;
   font-weight: bold;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .num span {
@@ -6551,7 +6580,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .nu
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .notice {
   font-size: 15px;
   letter-spacing: 2px;
-  color: #666666;
+  color: #dcab70;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row {
   display: flex;
@@ -6879,6 +6908,7 @@ html body .innerPage .center .pointWrap table tr th p {
   font-size: 14px;
   font-weight: bold;
   color: #dcab70;
+  border-right: solid 1px #8e7c5a;
 }
 html body .innerPage .center .pointWrap table tr td {
   width: 25%;

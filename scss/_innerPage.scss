@@ -678,7 +678,7 @@
                                     }
 
                                     &.code {
-                                        color: $remind_sp2;
+                                        color: $remind_sp;
                                     }
 
                                     &.none {
@@ -1465,7 +1465,7 @@
                                                         font-size: 12px;
                                                         font-weight: bold;
                                                         margin-bottom: 15px;
-                                                        color: $remind_sp2;
+                                                        color: $remind_sp;
 
                                                         &.remind {
                                                             color: $remind;
@@ -2060,7 +2060,7 @@
                             .date {
                                 width: 14%;
                                 text-align: center;
-                                color: $title_Time;
+                                color: $title_2;
                             }
                         }
                     }
@@ -2376,6 +2376,25 @@
                                         border-bottom: solid 2px $choose_Border;
                                         font-size: 13px;
                                         font-weight: bold;
+                                        position: relative;
+
+                                        &:last-child {
+
+                                            &::before {
+                                                display: none;
+                                            }
+                                        }
+
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            width: 1px;
+                                            height: 13px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 0;
+                                            background: $mainBorder_1;
+                                        }
                                     }
 
                                     td {
@@ -2386,6 +2405,25 @@
                                         font-weight: bold;
                                         text-align: center;
                                         border-bottom: solid 1px $mainBorder_1;
+                                        position: relative;
+
+                                        &:last-child {
+
+                                            &::before {
+                                                display: none;
+                                            }
+                                        }
+
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            width: 1px;
+                                            height: 13px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            right: 0;
+                                            background: $mainBorder_1;
+                                        }
                                     }
                                 }
                             }
@@ -2688,7 +2726,7 @@
                                     text-align: center;
 
                                     &.money {
-                                        color: $remind_sp2;
+                                        color: $remind_sp;
                                     }
 
                                     &.sp {
@@ -2914,7 +2952,7 @@
                                 }
     
                                 &.result {
-                                    color: $remind_sp2;
+                                    color: $remind_sp;
                                 }
     
                                 .arrow_ic {
@@ -3758,7 +3796,7 @@
 
                             .name {
                                 font-size: 17px;
-                                color: $mainFont_2;
+                                color: $title_1;
                                 font-weight: bold;
                             }
 
@@ -3774,7 +3812,7 @@
                             .notice {
                                 font-size: 15px;
                                 letter-spacing: 2px;
-                                color: $title_3;
+                                color: $title_2;
                             }
                         }
                     }
@@ -3856,7 +3894,7 @@
 
                         p {
                             display: inline;
-                            color: $remind_sp2;
+                            color: $remind_sp;
                             font-size: 13px;
                             letter-spacing: 1px;
                             font-weight: bold;
@@ -4064,6 +4102,7 @@
                             font-size: 14px;
                             font-weight: bold;
                             color: $title_2;
+                            border-right: solid 1px $mainBorder_1;
                         }
                     }
 
@@ -4088,7 +4127,7 @@
 
                             &.open {
                                 text-decoration: underline;
-                                color: $remind_sp2;
+                                color: $remind_sp;
                                 cursor: pointer;
                             }
                         }
