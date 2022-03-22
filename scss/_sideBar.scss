@@ -49,6 +49,9 @@
         z-index: 1;
         width: auto;
         height: auto;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
 
         li {
             width: 50px;
@@ -59,7 +62,7 @@
             background: $sideBar_BG2;
             border: solid 1px $sideBar_Border2;
             cursor: pointer;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             transform: rotate(45deg);
 
             &:hover,&:active,&.active {
@@ -67,10 +70,11 @@
             }
 
             &.invite {
-                width: 54px;
-                height: 55px;
+                width: 88px;
+                height: 90px;
                 transform: rotate(0deg);
                 border: none;
+                margin-right: -10px;
             }
 
             i {

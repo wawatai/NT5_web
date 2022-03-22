@@ -1131,6 +1131,9 @@ html body .sideBar .rightSide {
   z-index: 1;
   width: auto;
   height: auto;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 html body .sideBar .rightSide li {
   width: 50px;
@@ -1141,17 +1144,18 @@ html body .sideBar .rightSide li {
   background: linear-gradient(-45deg, #181818 0%, #353535 100%);
   border: solid 1px #dcbf95;
   cursor: pointer;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   transform: rotate(45deg);
 }
 html body .sideBar .rightSide li:hover, html body .sideBar .rightSide li:active, html body .sideBar .rightSide li.active {
   filter: brightness(1.2);
 }
 html body .sideBar .rightSide li.invite {
-  width: 54px;
-  height: 55px;
+  width: 88px;
+  height: 90px;
   transform: rotate(0deg);
   border: none;
+  margin-right: -10px;
 }
 html body .sideBar .rightSide li i {
   width: 30px;
@@ -4373,9 +4377,8 @@ html body .innerPage .center .mailWrap.innerMode {
   min-height: 900px;
   padding: 32px 27px;
   box-sizing: border-box;
-  border-radius: 5px;
   background: #313131;
-  box-shadow: 0 5px 10px -5px #00000066;
+  border: solid 1px #f3d3a4;
 }
 html body .innerPage .center .mailWrap.innerMode .title button {
   background: none;

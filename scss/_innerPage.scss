@@ -1748,9 +1748,8 @@
                 min-height: 900px;
                 padding: 32px 27px;
                 box-sizing: border-box;
-                border-radius: 5px;
                 background: $mainBG_1;
-                box-shadow: 0 5px 10px -5px $mainShadow_1;
+                border: solid 1px $mainBorder_2;
 
                 .title {
                     
